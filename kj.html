@@ -14,7 +14,65 @@
 
 
 <div id="n1">
- 
+
+
+
+
+
+
+  <img id="myImage" onclick="changeImage()" src="c1.png">
+
+
+
+  <script>
+  function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("c2a")) {
+      image.src = "c1.png";
+    } else {
+      image.src = "c2a.png";
+    }
+  }
+
+
+  function clickCounter() {
+    if (typeof(Storage) !== "undefined") {
+      if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount)+1;
+      } else {
+        localStorage.clickcount = 1;
+      }
+      document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    } else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+  }
+
+
+
+
+
+
+  </script>
+
+
+  <div id="result"></div>
+<img src="f1.png" height="60" width="80" id="d2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <img src="TY.png"</img>
 </div>
